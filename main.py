@@ -53,3 +53,11 @@ def total_expenses(transactions):
 
     return total
 print(total_expenses(transactions))
+
+#function to calculate remaining balance
+def current_balance(transactions):
+    income = total_income(transactions)
+    all_expenses = total_expenses(transactions)
+
+    return income - all_expenses
+print(current_balance(transactions)) 
