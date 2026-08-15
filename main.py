@@ -17,4 +17,6 @@ transact4 = transact(2201, "Fiverr", "31-07-2026", "Income", "Freelance Salary",
 transact5 = transact(3302, "Paballo", "02-08-2026", "Withdrawal", "Sis Groceries", 500)
 transact6 = transact(1003, "Foschini", "05-08-2026", "Payment", "Account", 300)
 
-print(transact6)
+#List of the transactions
+transactions = [transact1, transact2, transact3, transact4, transact5, transact6]
+
