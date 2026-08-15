@@ -13,11 +13,13 @@ class transact:
         return f"{self.transID}, {self.transName}, {self.date}, {self.type}, {self.describe}, R{self.amount}"
 
 transact1 = transact(1701, "Salary", "31-07-2026", "Income", "Monthly Salary", 10000)
-transact2 = transact(1602, "Rent", "01-08-2026", "Transfer", "Monthly Rent", 3500)
-transact3 = transact(1603, "Woolworths", "01-08-2026", "Purchase", "Handbag", 500)
+transact2 = transact(1602, "Rent", "01-08-2026", "Payment", "Monthly Rent", 5500)
+transact3 = transact(1603, "Woolworths", "01-08-2026", "Payment", "Handbag", 500)
 transact4 = transact(2201, "Fiverr", "31-07-2026", "Income", "Freelance Salary", 2500)
 transact5 = transact(3302, "Paballo", "02-08-2026", "Withdrawal", "Sis Groceries", 500)
 transact6 = transact(1003, "Foschini", "05-08-2026", "Payment", "Account", 300)
+transact7 = transact(2651, "Savings", "31-07-2026", "Savings", "Monthly Savings", 3500)
+transact8 = transact(3462, "Myciti", "03-08-2026", "Withdrawal", "Transport", 1500)
 
 #List of the transactions
 transactions = [transact1, transact2, transact3, transact4, transact5, transact6]
@@ -39,3 +41,14 @@ def total_income(transactions):
 
 print(total_income(transactions))
 
+#function to calculate the total expenses
+def total_expenses(transactions):
+    total = 0
+
+    expenses = ["Withdrawal", "Payment", "Savings"]
+
+    for transaction in transactions:
+        if transaction.type in expenses:
+            total += transaction.amount
+
+    return total
