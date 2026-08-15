@@ -1,3 +1,5 @@
+
+#created class for each transaction attribute 
 class transact:
     def __init__(self, transID, transName, date, type, describe, amount):
         self.transID = transID
@@ -19,4 +21,21 @@ transact6 = transact(1003, "Foschini", "05-08-2026", "Payment", "Account", 300)
 
 #List of the transactions
 transactions = [transact1, transact2, transact3, transact4, transact5, transact6]
+
+#loop for printing each transaction in the list
+for transaction in transactions:
+    print(transaction)
+    
+#function to calculate the total income recieved
+def total_income(transactions):
+    total = 0
+
+    for transaction in transactions:
+        print(transaction.type, transaction.amount)
+        if transaction.type == "Income":
+            total += transaction.amount
+
+    return total
+
+print(total_income(transactions))
 
