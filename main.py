@@ -22,7 +22,7 @@ transact7 = transact(2651, "Savings", "31-07-2026", "Savings", "Monthly Savings"
 transact8 = transact(3462, "Myciti", "03-08-2026", "Withdrawal", "Transport", 1500)
 
 #List of the transactions
-transactions = [transact1, transact2, transact3, transact4, transact5, transact6]
+transactions = [transact1, transact2, transact3, transact4, transact5, transact6, transact7, transact8]
 
 #loop for printing each transaction in the list
 for transaction in transactions:
@@ -52,3 +52,4 @@ def total_expenses(transactions):
             total += transaction.amount
 
     return total
+print(total_expenses(transactions))
